@@ -1,0 +1,124 @@
+/* Reset CSS */
+
+/* Box sizing border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Margin and padding reset */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+li,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+table,
+td,
+th,
+code,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* List styles reset */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Typography reset */
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+/* Reset links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Tables reset */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset form elements */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    color: inherit;
+}
+
+/* Additional resets */
+img,
+embed,
+iframe,
+object,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Prevent resizing on some elements */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    cursor: pointer;
+}
+
+/* Ensure correct display for audio and video elements in IE 11 */
+audio,
+video {
+    display: inline-block;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/* Ensure vertical alignment consistency */
+img {
+    vertical-align: middle;
+}
