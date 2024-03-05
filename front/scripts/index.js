@@ -13,6 +13,10 @@ function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}
     const texto_tarjeta = document.createElement('div'); //* Creo un div para mostrar la informacion de la tarjeta
     texto_tarjeta.classList.add('card-body');
 
+    const enlace_titulo = document.createElement('a');
+    enlace_titulo.classList.add('enlace-titulo');
+    enlace_titulo.href = "#"
+
     const titulo_tarjeta = document.createElement('h4'); //* Creo el titulo y le adjunto el titlo traido.
     titulo_tarjeta.classList.add('card-title');
     titulo_tarjeta.textContent = title;
@@ -30,8 +34,9 @@ function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}
     //*Agrego todos los elementos y los devuelvo
     tarjeta.appendChild(imagen_tarjeta);
     tarjeta.appendChild(texto_tarjeta);
-    texto_tarjeta.appendChild(titulo_tarjeta);
+    texto_tarjeta.appendChild(enlace_titulo);
     texto_tarjeta.appendChild(info_tarjeta);
+    enlace_titulo.appendChild(titulo_tarjeta);
 
     return tarjeta;
 

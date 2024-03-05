@@ -19,8 +19,11 @@ body{
 .card{
   min-width: 250px;
   max-width: 250px;
-
+  transition: 0.6s;
 }
+
+.card:hover{
+  transform: scale(1.05);}
 
 .card-img-top{
   max-height: 515px;
@@ -45,5 +48,14 @@ body{
   height: 60px;
   position: fixed;
   bottom: 0;
+}
+
+.enlace-titulo{
+  transition: 0.6s;
+}
+
+.enlace-titulo:hover {
+  color: purple;
+  transform: scale(1.03);
 }
 
