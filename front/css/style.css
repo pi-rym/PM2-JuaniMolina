@@ -1,0 +1,21 @@
+*{
+  font-family: bebasneue;
+}
+
+body{
+  background-image: url(../assets/img/fondo-purpura.jpg);
+  background-size: cover;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vw;
+  margin-bottom: 10vw;
+}
+
+.card{
+  max-width: 350px;
+}
+
