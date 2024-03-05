@@ -41,7 +41,37 @@ function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}
     return tarjeta;
 
 }
-const contenedor_tarjetas = document.getElementById('contenedor_tjt')
+
+function cargar_generos(){
+    const generos = document.getElementById('menu-genero');
+    const generos_unicos = obtenerGenerosUnicos(tempData);
+
+    generos.innerHTML = "";
+
+    generos_unicos.forEach(genero => {
+        const opcion = document.createElement('li');
+        const link_opcion = document.createElement('a');
+        link_opcion.textContent = genero;
+        link_opcion.href = "#";
+        link_opcion.classList.add('dropdown-item');
+        opcion.appendChild(link_opcion);
+        generos.appendChild(opcion)
+    });
+}
+
+function obtenerGenerosUnicos(peliculas) {
+    const generos = new Set();
+    peliculas.forEach(pelicula => {
+        pelicula.genre.forEach(genero => {
+        generos.add(genero);
+        });
+    });
+    return Array.from(generos);
+}
+
+window.addEventListener('load', cargar_generos);
+
+const contenedor_tarjetas = document.getElementById('contenedor_tjt');
 
 const peliculas = tempData.map(objeto_a_tarjeta);
 

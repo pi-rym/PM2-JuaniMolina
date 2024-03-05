@@ -5,6 +5,12 @@
 body{
   background-image: url(../assets/img/fondo-purpura.jpg);
   background-size: cover;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+body.fade-out{
+  opacity: 0;
 }
 
 /* -------------------- *CONTENEDOR DE TARJETAS ----------------------- */
@@ -20,6 +26,9 @@ body{
   min-width: 250px;
   max-width: 250px;
   transition: 0.6s;
+  filter: drop-shadow(68px 67px 40px #000000);
+  -webkit-filter: drop-shadow(68px 67px 40px #000000);
+  -moz-filter: drop-shadow(68px 67px 40px #000000);
 }
 
 .card:hover{
@@ -36,6 +45,7 @@ body{
   font-size: 18px;
   min-width: 250px;
   min-height: 200px;
+  max-height: 250px;
 }
 
 .foot{
