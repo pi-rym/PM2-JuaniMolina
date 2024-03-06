@@ -4,13 +4,22 @@
 
 body{
   background-image: url(../assets/img/fondo-purpura.jpg);
-  background-size: cover;
-  opacity: 1;
-  transition: opacity 0.3s ease;
 }
 
 body.fade-out{
   opacity: 0;
+}
+
+.titulos-estreno{
+  font-size: 100px;
+  color: aliceblue; 
+  text-align: center; 
+  margin-top: 15px;
+  filter: drop-shadow(68px 67px 40px #000000);
+  -webkit-filter: drop-shadow(127px 32px 3px #000000);
+  -moz-filter: drop-shadow(68px 67px 40px #000000);
+
+
 }
 
 /* -------------------- *CONTENEDOR DE TARJETAS ----------------------- */
@@ -24,15 +33,25 @@ body.fade-out{
 
 .card{
   min-width: 280px;
-  max-width: 250px;
+  /* max-width: 250px; */
   transition: 0.6s;
   filter: drop-shadow(68px 67px 40px #000000);
   -webkit-filter: drop-shadow(68px 67px 40px #000000);
   -moz-filter: drop-shadow(68px 67px 40px #000000);
 }
 
+.card-estreno{
+  height: 300px;
+}
+
+.card-img{
+  width: 250px;
+  height: 297px;
+}
+
 .card:hover{
-  transform: scale(1.05);}
+  transform: scale(1.05);
+}
 
 .card-img-top{
   max-height: 515px;
@@ -42,7 +61,7 @@ body.fade-out{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 20px;
   min-width: 250px;
   min-height: 200px;
   max-height: 250px;
@@ -61,11 +80,10 @@ body.fade-out{
 }
 
 .enlace-titulo{
-  transition: 0.6s;
+  transition: 0.1s;
 }
 
 .enlace-titulo:hover {
   color: purple;
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
-

@@ -80,12 +80,14 @@ function mapear_a_tarjetas(datos){
 
 // ? Funcion Callback que trae datos .
 let obtener_datos = (datos) =>{
+    const id = 'contenedor_tjt';
     cargar_generos(datos);
     mapear_a_tarjetas(datos);
 }
 
 // ? Función GET de AJAX para obtener datos de la API.
 $.get(api_url,obtener_datos);
+
 
 
 
