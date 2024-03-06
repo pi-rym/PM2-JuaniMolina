@@ -33,7 +33,7 @@ body.fade-out{
 
 .card{
   min-width: 280px;
-  /* max-width: 250px; */
+  max-width: 250px;
   transition: 0.6s;
   filter: drop-shadow(68px 67px 40px #000000);
   -webkit-filter: drop-shadow(68px 67px 40px #000000);
@@ -41,7 +41,7 @@ body.fade-out{
 }
 
 .card-estreno{
-  height: 300px;
+  max-width: max-content;
 }
 
 .card-img{
