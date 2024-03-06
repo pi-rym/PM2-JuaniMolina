@@ -87,10 +87,3 @@ let obtener_datos = (datos) =>{
 
 // ? Función GET de AJAX para obtener datos de la API.
 $.get(api_url,obtener_datos);
-
-
-
-
-
-
-

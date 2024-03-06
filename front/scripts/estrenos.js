@@ -63,3 +63,5 @@ let datos_estrenos = (datos) => {
 
 //?CONEXION DE A LA API.
 $.get(apiUrl_tmdb, datos_estrenos);
+
+
