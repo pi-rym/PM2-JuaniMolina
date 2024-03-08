@@ -14,13 +14,9 @@ function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}
     texto_tarjeta.classList.add('card-body');
 
     const enlace_titulo = document.createElement('a');
-    enlace_titulo.classList.add('enlace-titulo');
+    enlace_titulo.classList.add('enlace-titulo', 'fs-4');
     enlace_titulo.href = "#"
     enlace_titulo.textContent = title;
-
-    const titulo_tarjeta = document.createElement('h4'); //* Creo el titulo y le adjunto el titlo traido.
-    titulo_tarjeta.classList.add('card-title');
-    titulo_tarjeta.appendChild(enlace_titulo);
 
     const info_tarjeta = document.createElement('p'); //* Creo la informacion de la pelicula en la tjt y como se va a ver
     info_tarjeta.classList.add('card-text');

@@ -12,7 +12,7 @@ function objeto_a_tarjeta(data) {
     const col2 = document.createElement('div');
     const imagen = document.createElement('img');
     const card_body = document.createElement('div');
-    const card_title = document.createElement('h3');
+    // const card_title = document.createElement('h3');
     const link_title = document.createElement('a');
     const card_text = document.createElement('p');
 
@@ -24,7 +24,7 @@ function objeto_a_tarjeta(data) {
     col2.classList.add('col-md-10');
     imagen.classList.add('img-fuid', 'rounded-start', 'card-img'); // Añadí 'img-fluid' para hacer la imagen responsive
     card_body.classList.add('card-body');
-    card_title.classList.add('card-title');
+    // card_title.classList.add('card-title');
     link_title.classList.add('enlace-titulo');
     link_title.setAttribute('target', '_blank')
     card_text.classList.add('card-text');
@@ -40,8 +40,8 @@ function objeto_a_tarjeta(data) {
         <strong>Reseñas:</strong> ${data.overview}`;
 
     //?APPENDEO LOS ELEMENTOS PARA DARLE FORMA
-    card_title.appendChild(link_title);
-    card_body.appendChild(card_title);
+    // card_title.appendChild(link_title);
+    card_body.appendChild(link_title);
     card_body.appendChild(card_text);
 
     col1.appendChild(imagen);

@@ -22,7 +22,7 @@ body.fade-out{
 
 }
 
-/* -------------------- *CONTENEDOR DE TARJETAS ----------------------- */
+/*! -------------------- *CONTENEDOR DE TARJETAS ----------------------- */
 
 .container {
   display: flex;
@@ -41,7 +41,7 @@ body.fade-out{
 }
 
 .card-estreno{
-  max-width: max-content;
+  max-width: 80vw;
 }
 
 .card-img{
@@ -85,5 +85,7 @@ body.fade-out{
 
 .enlace-titulo:hover {
   color: purple;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
+
+/*! ------------------------ modificacion tjts Estreno-------------------------------- */
