@@ -57,11 +57,11 @@ function objeto_a_tarjeta(data) {
 }
 
 //? FUNCION PARA ENVIAR CADA UNO DE LOS ELEMENTOS DEL ARRAY
-let datos_estrenos = (datos) => {
+function datos_estrenos (datos) {
     datos.results.forEach(dato => objeto_a_tarjeta(dato));
 };
 
-//?CONEXION DE A LA API.
-$.get(apiUrl_tmdb, datos_estrenos);
-
-
+module.exports = {
+    datos_estrenos,
+    apiUrl_tmdb
+}

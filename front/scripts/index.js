@@ -1,85 +1,36 @@
-const api_url = "https://students-api.2.us-1.fl0.io/movies";
+const {obtener_datos, api_url} = require('./datos');
+const {datos_estrenos, apiUrl_tmdb} = require('./estrenos');
+const axios = require('axios');
 
-function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}){ //  * funcion para recibir por parametro un objeto y pasarlo a una tarjeta
+
+// ? Función GET de AJAX para obtener datos de la API de alumnos
+// $.get(api_url, obtener_datos);
+
+//?CONEXION MEDIANTE GET CON LA API DE TMDB.
+// $.get(apiUrl_tmdb, datos_estrenos);
+
+
+//? OBTENCION DE DATOS ATRAVEZ DE AXIOS CON ASYNC/AWAIT.
+const fetchPeliculas = async () =>{
+    try {
+        const datos = await axios.get(api_url); // !
+        obtener_datos(datos.data);
+        console.log(datos.data);
     
-    const tarjeta = document.createElement('div');
-    tarjeta.classList.add('card'); //* Creo una tarjeta para almacenar la foto y debajo el texto descriptivo
+    } catch (error) {
+    }
+};
 
-    const imagen_tarjeta = document.createElement('img'); //*Traigo la informacion de la tarjeta
-    imagen_tarjeta.classList.add('card-img-top');
-    imagen_tarjeta.src = poster;
-    imagen_tarjeta.alt = title;
-
-    const texto_tarjeta = document.createElement('div'); //* Creo un div para mostrar la informacion de la tarjeta
-    texto_tarjeta.classList.add('card-body');
-
-    const enlace_titulo = document.createElement('a');
-    enlace_titulo.classList.add('enlace-titulo', 'fs-4');
-    enlace_titulo.href = "#"
-    enlace_titulo.textContent = title;
-
-    const info_tarjeta = document.createElement('p'); //* Creo la informacion de la pelicula en la tjt y como se va a ver
-    info_tarjeta.classList.add('card-text');
-    info_tarjeta.innerHTML = 
-    `<strong>Año:</strong> ${year} <br>
-    <strong>Director:</strong> ${director} <br>
-    <strong>Duración:</strong> ${duration} <br>
-    <strong>Género:</strong> ${genre} <br>
-    <strong>Calificación:</strong> ${rate}`
-    
-
-    //*Agrego todos los elementos y los devuelvo
-    tarjeta.appendChild(imagen_tarjeta);
-    tarjeta.appendChild(texto_tarjeta);
-    texto_tarjeta.appendChild(enlace_titulo);
-    texto_tarjeta.appendChild(info_tarjeta);
-    
-
-    return tarjeta;
-
-}
-
-function cargar_generos(datos){
-    const generos = document.getElementById('menu-genero');
-    const generos_unicos = obtenerGenerosUnicos(datos);
-
-    generos.innerHTML = "";
-
-    generos_unicos.forEach(genero => {
-        const opcion = document.createElement('li');
-        const link_opcion = document.createElement('a');
-        link_opcion.textContent = genero;
-        link_opcion.href = "#";
-        link_opcion.classList.add('dropdown-item');
-        opcion.appendChild(link_opcion);
-        generos.appendChild(opcion)
-    });
-}
-
-function obtenerGenerosUnicos(peliculas) {
-    return peliculas.reduce((generos, pelicula) =>{
-        pelicula.genre.forEach(genero => {
-            if(!generos.includes(genero)){
-                generos.push(genero);
-            }
-        });
-        return generos;
-    },[]);
-}
-
-// ? Funcion para mapear las tarjetas y colocarlas en el HTML.
-function mapear_a_tarjetas(datos){
-    const contenedor_tarjetas = document.getElementById('contenedor_tjt');
-    datos.forEach(dato => contenedor_tarjetas.appendChild(objeto_a_tarjeta(dato)));
+const fetchEstrenos = async ()=> {
+    try {
+        const estrenos = await axios.get(apiUrl_tmdb);
+        datos_estrenos(estrenos.data);
+    } catch (error) {
+        
+    }
 }
 
 
-// ? Funcion Callback que trae datos .
-let obtener_datos = (datos) =>{
-    const id = 'contenedor_tjt';
-    cargar_generos(datos);
-    mapear_a_tarjetas(datos);
-}
+fetchPeliculas();
 
-// ? Función GET de AJAX para obtener datos de la API.
-$.get(api_url,obtener_datos);
+fetchEstrenos();
