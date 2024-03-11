@@ -1,4 +1,4 @@
-const api_url = "https://students-api.2.us-1.fl0.io/movies";
+const api_url = "https://students-api.up.railway.app/movies";
 
 function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}){ //  * funcion para recibir por parametro un objeto y pasarlo a una tarjeta
     const contenedor_tarjetas = document.getElementById('contenedor_tjt');
