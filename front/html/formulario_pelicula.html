@@ -49,48 +49,50 @@
         <div class="text-center text-white m-4">
             <h1>Formulario de Pelicula</h1>
         </div>
-        <div id="formulario" class="container col-4 border bg-white rounded p-3 justify-content-center">
-            <form action="submit" class="d-flex flex-column col-12">
+        
+            <div id="formulario" class="container col-4 border bg-white rounded p-3 justify-content-center">
+                <form action="submit" class="d-flex flex-column col-12">
+                    
+                    <label for="titulo">Titulo</label>
+                    <input type="text" name="titulo" id="title" class="form-control">
+                    
+                    <label for="año">Año</label>
+                    <input type="text" name="año" id="year" class="form-control">
 
-                <label for="titulo">Titulo</label>
-                <input type="text" name="titulo" id="title" class="form-control">
+                    <label for="director">Director</label>
+                    <input type="text" name="director" id="director" class="form-control">
 
-                <label for="año">Año</label>
-                <input type="text" name="año" id="year" class="form-control">
+                    <label for="duracion">Duración</label>
+                    <input type="text" name="duration" id="" class="form-control">
 
-                <label for="director">Director</label>
-                <input type="text" name="director" id="director" class="form-control">
+                    <label class="mt-3" for="genero">Genero</label>
+                    <div class="form-group mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="action" name="genre" value="Action">
+                            <label class="form-check-label" for="action">
+                                Action
+                            </label>
+                        </div>
 
-                <label for="duracion">Duración</label>
-                <input type="text" name="duration" id="" class="form-control">
-
-                <label class="mt-3" for="genero">Genero</label>
-                <div class="form-group mb-3">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="action" name="genre" value="Action">
-                        <label class="form-check-label" for="action">
-                            Action
-                        </label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="adventure" name="genre" value="Adventure">
+                            <label class="form-check-label" for="adventure">
+                                Adventure
+                            </label>
+                        </div> <!-- ! Agregar todas las necesarias,  VER SI LO HAGO DE FORMA DINAMICA CON JS-->
+                    
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="adventure" name="genre" value="Adventure">
-                        <label class="form-check-label" for="adventure">
-                            Adventure
-                        </label>
-                    </div> <!-- ! Agregar todas las necesarias,  VER SI LO HAGO DE FORMA DINAMICA CON JS-->
+                    <label for="rate">Puntuación</label>
+                    <input type="number" class="form-control" id="score" name="score" step="0.1" min="0" max="10" pattern="[0-9]+" value="10">
+
+                    <label for="imagen">Poster</label>
+                    <input type="url" name="" id="" class="form-control">
                     
-                </div>
-
-                <label for="rate">Puntuación</label>
-                <input type="number" class="form-control" id="score" name="score" step="0.1" min="0" max="10" pattern="[0-9]+" value="10">
-
-                <label for="imagen">Poster</label>
-                <input type="url" name="" id="" class="form-control">
-
-                <button type="" class="btn btn-primary mt-5">Enviar</button>
-            </form>
-        </div>
+                    <button type="" class="btn btn-primary mt-5">Enviar</button>
+                </form>
+            </div>
+        
     </main>
     
     <footer>
