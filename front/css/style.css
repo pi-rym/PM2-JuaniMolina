@@ -88,5 +88,10 @@ body.fade-out{
   transform: scale(1.03);
 }
 
-/*! ------------------------ fondo formulario-------------------------------- */
+/*! ------------------------ historia del cine -------------------------------- */
+
+.tamaño_img_historia{
+  width: 150px;
+  height: 215px;
+}
 
