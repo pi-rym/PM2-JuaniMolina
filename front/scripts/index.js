@@ -15,7 +15,6 @@ const fetchPeliculas = async () =>{
     try {
         const datos = await axios.get(api_url); // !
         obtener_datos(datos.data);
-        console.log(datos.data);
     
     } catch (error) {
     }
