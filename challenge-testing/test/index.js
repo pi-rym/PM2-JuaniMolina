@@ -9,7 +9,7 @@ class CarritoCompra{
 
     calcularTotal(){
         let total = 0;
-        for(producto of this.productos){
+        for(let producto of this.productos){
             total += producto.precio * producto.cantidad;
         }
         return total;
