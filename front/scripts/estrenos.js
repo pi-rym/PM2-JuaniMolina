@@ -2,6 +2,7 @@
 const apiKey_tmdb = "4b444edf26f8c894f2cc2effec19b5b5";
 const apiUrl_tmdb = `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey_tmdb}&region=AR&language=es`;
 
+//?FUNCIONES
 function objeto_a_tarjeta(data) {
     const contenedor_tarjetas = document.getElementById('estrenos_tjt');
     
@@ -56,7 +57,7 @@ function objeto_a_tarjeta(data) {
     contenedor_tarjetas.appendChild(card);
 }
 
-//? FUNCION PARA ENVIAR CADA UNO DE LOS ELEMENTOS DEL ARRAY
+
 function datos_estrenos (datos) {
     datos.results.forEach(dato => objeto_a_tarjeta(dato));
 };

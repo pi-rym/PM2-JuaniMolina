@@ -69,7 +69,7 @@ function obtenerGenerosUnicos(peliculas) {
     },[]);
 }
 
-// ? Funcion para mapear las tarjetas y colocarlas en el HTML.
+// ? 
 function obtener_datos(datos) {
     cargar_generos(datos);
     datos.forEach((dato)=> objeto_a_tarjeta(dato));
