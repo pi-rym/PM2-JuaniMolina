@@ -28,6 +28,17 @@ module.exports ={
         }catch (error){
             throw new Error(error);
         }
+    },
+
+    createMovieService: async (movie)=>{
+        try {
+            const newMovie = await Movie_model.create(movie);
+            console.log("LLEGUE AL SERVICE");
+            return newMovie;
+        } catch (error) {
+            throw Error(error.message);
+        }
     }
 }
+
 

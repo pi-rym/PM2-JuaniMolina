@@ -1,6 +1,6 @@
 const  movieServices  = require('../services/movieServices')
 
-const movieController = async (req, res)=>{
+const getAllMovies = async (req, res)=>{
     try {
         const movies = await movieServices.getMovies();
         res.status(200).json(movies);
@@ -9,4 +9,17 @@ const movieController = async (req, res)=>{
     }
 }
 
-module.exports = movieController;
+const createMovie = async (req, res) =>{
+    try {
+        await movieServices.createMovieService(req.body);
+
+        res.status(201).json({message: "Pelicula Creada Exitosamente"})
+    } catch (error) {
+        res.status(400).jason({error:error.message})
+    }
+}
+
+module.exports = { 
+    getAllMovies, 
+    createMovie
+};

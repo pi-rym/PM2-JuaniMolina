@@ -4,8 +4,8 @@ const { PORT } = process.env;
 const conexiondb = require("./src/config/dbconnection")
 
 
-conexiondb().then((res) =>{
+conexiondb().then(() =>{
     app.listen(PORT, ()=>{
         console.log("El servidor esta corriendo");
     });
-});
+}).catch((err) => console.log("Fallo en la Conexion", err.menssge));
