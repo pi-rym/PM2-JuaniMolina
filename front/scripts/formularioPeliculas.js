@@ -109,5 +109,3 @@ const capturarValores = (event)=>{
 }
 
 enviar.addEventListener("click", capturarValores);
-
-
