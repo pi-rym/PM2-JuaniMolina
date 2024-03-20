@@ -37,7 +37,7 @@ function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}
     texto_tarjeta.appendChild(info_tarjeta);
     
 
-    contenedor_tarjetas.appendChild(tarjeta);
+    contenedor_tarjetas?.appendChild(tarjeta);
 
 }
 

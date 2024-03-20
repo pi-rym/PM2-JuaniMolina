@@ -5,7 +5,7 @@ const axios = require('axios');
 
 const fetchPeliculas = async () =>{
     try {
-        const datos = await axios.get(api_url); // !
+        const datos = await axios.get(api_url); 
         obtener_datos(datos.data);
     
     } catch (error) {
@@ -23,5 +23,5 @@ const fetchEstrenos = async ()=> {
 
 
 fetchPeliculas();
-
 fetchEstrenos();
+
