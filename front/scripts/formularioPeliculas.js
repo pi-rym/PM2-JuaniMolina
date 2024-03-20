@@ -49,7 +49,7 @@ render_genero();
 
 function validacionMovie({title, year, director, duration, genre, rate,  poster}){
     if (!title || !year || !director || !duration || !genre.length || !rate || !poster) {
-        alert("Por favor, completa todos los campos.");
+        alert("Faltan Datos.Por favor, completa todos los campos.");
         return false;
     };
 
@@ -72,9 +72,10 @@ const postMovie = async(nuevaPelicula)=>{
         const respuesta = await axios.post(api_url, nuevaPelicula);
         console.log(respuesta.data);
         alert("Pelicula Agregada")
+        window.location.href = "../index.html"
     } catch (error) {
         console.log(error.message);
-        alert(error,message);
+        alert(error.message);
     }
 }
 
@@ -103,6 +104,7 @@ const capturarValores = (event)=>{
     }
 
     postMovie(nuevaPelicula);
+    reset();
 
 }
 
