@@ -13,10 +13,10 @@ function objeto_a_tarjeta({title, year, director, duration, genre, rate, poster}
     imagen_tarjeta.alt = title;
 
     const texto_tarjeta = document.createElement('div'); //* Creo un div para mostrar la informacion de la tarjeta
-    texto_tarjeta.classList.add('card-body');
+    texto_tarjeta.classList.add('card-body', 'text-body-tamaño');
 
     const enlace_titulo = document.createElement('a');
-    enlace_titulo.classList.add('enlace-titulo', 'fs-4');
+    enlace_titulo.classList.add('enlace-titulo', 'tamaño-titulo');
     enlace_titulo.href = "#"
     enlace_titulo.textContent = title;
 

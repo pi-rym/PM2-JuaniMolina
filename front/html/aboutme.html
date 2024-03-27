@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <title>PM2 - FlickFacts</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">FlickFacts</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/noticias.html">Historia del Cine</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/formulario_pelicula.html">Agregar Pelicula</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/estrenos.html">Estrenos</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Género</a>
+                                <ul id="menu-genero" class="dropdown-menu"></ul> <!-- *Agregar con js los generos de las pelis obtenidas -->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Sobre mí</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+        <div class="d-flex flex-column align-items-center m-3 bg-black bg-opacity-50 rounded">
+            <h1 class="text-white">sobre mí</h1>
+        </div>
+
+        <a href="#" class="enlace-flecha">
+            <img src="../assets/img/flecha-arriba.png" alt="Flecha arriba" class="flecha-up">
+        </a>
+        
+        </main>
+
+        
+        <script src="../browser/index.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+
+    <footer>
+    <nav class="foot" style="position: fixed; bottom: 0;">
+        <div class="">
+        <a class="" href="../index.html">FlickFacts</a>
+        </div>
+    </nav>
+</footer>
+</html>

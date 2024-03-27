@@ -28,14 +28,18 @@ body.fade-out{
   display: flex;
   flex-wrap:wrap;
   justify-content: space-between;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.contenedor-tamaño{
+  width: 100vw;
 }
 
 .card{
   margin-bottom:20px;
-  min-width: 280px;
-  max-width: 250px;
+  min-width: 190px;
+  max-width: 200px;
   transition: 0.6s;
   filter: drop-shadow(68px 67px 40px #000000);
   -webkit-filter: drop-shadow(68px 67px 40px #000000);
@@ -43,6 +47,7 @@ body.fade-out{
 }
 
 .card-estreno{
+  min-width: 80vw;
   max-width: 80vw;
 }
 
@@ -51,12 +56,17 @@ body.fade-out{
   height: 297px;
 }
 
+.card-text{
+  font-size: 16px;
+}
+
 .card:hover{
   transform: scale(1.05);
 }
 
 .card-img-top{
-  max-height: 515px;
+  max-height: 300px;
+  max-width: 200px;
 }
 
 .card-body{
@@ -64,9 +74,13 @@ body.fade-out{
   flex-direction: column;
   justify-content: space-between;
   font-size: 20px;
-  min-width: 250px;
-  min-height: 200px;
+  min-width: 200px;
+  min-height: 150px;
   max-height: 250px;
+}
+
+.text-body-tamaño{
+  font-size: 12px;
 }
 
 .foot{
@@ -81,14 +95,19 @@ body.fade-out{
   bottom: 0;
 }
 
-.enlace-titulo{
+.enlace-titulo {
   transition: 0.1s;
+}
+
+.tamaño-titulo{
+  font-size: 16px;
 }
 
 .enlace-titulo:hover {
   color: purple;
   transform: scale(1.03);
 }
+
 
 /*! ------------------------ historia del cine -------------------------------- */
 
@@ -97,3 +116,19 @@ body.fade-out{
   height: 215px;
 }
 
+.flecha-up{
+  position: fixed;
+  bottom: 9px;
+  right: 20px;
+  z-index: 999;
+  width: 3em;
+}
+
+.flecha-up:hover{
+  background-image: url('../assets/img/flecha-arriba3.png');
+  border-radius: 50%;
+}
+
+.enlace-flecha:hover img{
+  content: url('../assets/img/flecha-arriba3.png');
+}

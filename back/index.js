@@ -8,4 +8,4 @@ conexiondb().then(() =>{
     app.listen(PORT, ()=>{
         console.log("El servidor esta corriendo");
     });
-}).catch((err) => console.log("Fallo en la Conexion", err.menssge));
+}).catch((err) => console.log("Fallo en la Conexion", err.menssage));
